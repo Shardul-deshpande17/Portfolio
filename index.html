@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shardul Rahul Deshpande | SOC &amp; Blue Team Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio of Shardul Rahul Deshpande: SOC and Blue Team labs, SIEM investigations, network traffic analysis and cloud detection.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%234f46e5'/%3E%3Cpath d='M16 6l8 3v7c0 5-3.4 8.4-8 10-4.6-1.6-8-5-8-10V9z' fill='none' stroke='white' stroke-width='2' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Apply saved theme before first paint to avoid a flash */
+    (function () {
+      try {
+        var saved = localStorage.getItem("theme");
+        var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+        document.documentElement.setAttribute("data-theme", saved || (dark ? "dark" : "light"));
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body id="top">
+
+  <!-- Icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></g></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.4 8.4-8 9.5C7.4 20.4 4 17 4 12V6z"/><path d="m9 12 2 2 4-4"/></g></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></g></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></g></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="m21 16-5-5-8 8"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m10 8.5 5.5 3.5-5.5 3.5z"/></g></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5"/></g></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 13A9 9 0 1 1 11 3a7 7 0 0 0 10 10z"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Back to top">
+        <span class="brand-name">Shardul Rahul Deshpande</span>
+      </a>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme">
+        <svg class="icon icon-moon"><use href="#i-moon"/></svg>
+        <svg class="icon icon-sun"><use href="#i-sun"/></svg>
+      </button>
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#competitions">Competitions</a></li>
+          <li><a href="#learning">Learning</a></li>
+          <li><a href="#certifications">Certificates</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 1. HERO -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Cybersecurity · SOC · Blue Team</p>
+          <h1>Shardul Rahul Deshpande</h1>
+          <p class="headline">Evidence first, conclusions second.</p>
+          <p class="lead">
+            I'm a SOC and blue team student who investigates suspicious activity through SIEM searches, packet
+            captures and cloud logs, then turns what I find into detections. The projects below are labs I built
+            and ran myself, with notes on what each one proved and what it didn't.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#projects">View projects</a>
+            <a class="btn btn-ghost" data-link="github"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+            <a class="btn btn-ghost" data-link="linkedin"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a>
+            <a class="btn btn-ghost" data-link="tryhackme"><svg class="icon"><use href="#i-shield"/></svg>TryHackMe</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>About me</h2>
+        <div class="about-copy reveal">
+          <p>
+            I'm a cybersecurity student building a career in Security Operations, with a pull toward the blue team
+            side: monitoring, alert triage, incident investigation and threat detection.
+          </p>
+          <p>
+            Most of my hands-on work is digging into security events, tracing suspicious activity, spotting
+            indicators of compromise and writing detection logic in Splunk, alongside analysing network traffic in
+            Wireshark to see what's really happening on the wire. I completed the TryHackMe SOC Level 1 path, which
+            gave me practical experience in SIEM investigation, packet analysis and log correlation, and I keep
+            sharpening it through further labs and self-directed investigations.
+          </p>
+          <p>
+            I'm looking for a SOC Analyst (L1) role where I can put this foundation to work in a live security
+            operations environment and keep growing as a defender.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <p class="eyebrow">Projects</p>
+        <h2>Hands-on labs</h2>
+        <p class="section-intro">Select a project for the full breakdown: the why, the tools, what I did, the outcome and what it did not prove.</p>
+        <div id="project-grid" class="card-grid"></div>
+
+        <div class="skills-block reveal">
+          <h3>Skills developed</h3>
+          <ul class="chips" aria-label="Skills developed">
+            <li>SIEM &amp; SPL</li>
+            <li>Log analysis</li>
+            <li>Alert triage</li>
+            <li>Network traffic analysis</li>
+            <li>Packet analysis</li>
+            <li>IOC identification</li>
+            <li>Detection engineering basics</li>
+            <li>MITRE ATT&amp;CK</li>
+            <li>Cloud detection</li>
+            <li>Digital forensics (learning)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. COMPETITIONS -->
+    <section id="competitions" class="section">
+      <div class="container">
+        <p class="eyebrow">Competitions</p>
+        <h2>CTFs &amp; challenges</h2>
+
+        <article class="panel reveal">
+          <div class="panel-head">
+            <div>
+              <h3>"It's Downtime!" Blue Team CTF</h3>
+              <p class="muted">TryHackMe · My first dedicated defensive CTF</p>
+            </div>
+            <span class="status">Team rank 335 · played solo</span>
+          </div>
+
+          <div class="two-col">
+            <div>
+              <h4>What it involved</h4>
+              <p>
+                A set of warm-up exercises followed by five CTF challenges where I had to investigate evidence and
+                decide what to examine next. The warm-up built confidence; the five challenges showed me how much I
+                still have to learn.
+              </p>
+              <h4>Areas covered</h4>
+              <ul class="chips">
+                <li>Disk images</li>
+                <li>Extracting embedded files</li>
+                <li>Encrypted artifacts &amp; hashes</li>
+                <li>Command-line tools</li>
+                <li>Digital forensics</li>
+              </ul>
+            </div>
+            <div>
+              <h4>What I learned</h4>
+              <ul class="plain">
+                <li>Following an investigation is different from running the whole process confidently on my own.</li>
+                <li>I used extra learning resources when stuck, and treated those moments as study time.</li>
+                <li>Finding my gaps was the real result, and I now know what to practise.</li>
+                <li>Next step: redo the hard parts independently and write my own investigation playbook.</li>
+              </ul>
+              <h4>Evidence</h4>
+              <div class="btn-row">
+                <a class="btn btn-small" data-link="blog"><svg class="icon"><use href="#i-book"/></svg>Read my CTF blog</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. PRACTICAL LEARNING -->
+    <section id="learning" class="section alt">
+      <div class="container">
+        <p class="eyebrow">Practical learning</p>
+        <h2>Hands-on training</h2>
+        <p class="section-intro">Labs and learning paths I completed in practice environments, listed separately from certificates.</p>
+
+        <article class="panel reveal">
+          <div class="panel-head">
+            <div>
+              <h3>TryHackMe: SOC Level 1 path</h3>
+              <p class="muted">Completed, including the SOC Level 1 capstone challenge</p>
+            </div>
+            <a class="btn btn-small" data-link="tryhackme"><svg class="icon"><use href="#i-shield"/></svg>TryHackMe profile</a>
+          </div>
+
+          <div class="stat-row">
+            <div class="stat">
+              <span class="stat-value">70+</span>
+              <span class="stat-label">Rooms completed, and counting</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">1</span>
+              <span class="stat-label">Learning path completed</span>
+            </div>
+          </div>
+
+          <h4>Areas covered</h4>
+          <ul class="chips">
+            <li>SOC fundamentals</li>
+            <li>SIEM investigation (Splunk &amp; Elastic)</li>
+            <li>Network traffic analysis</li>
+            <li>Snort / IDS</li>
+            <li>Web attack detection</li>
+            <li>Windows &amp; Linux threat detection</li>
+            <li>Malware analysis fundamentals</li>
+            <li>Cyber threat intelligence</li>
+            <li>End-to-end incident investigations</li>
+          </ul>
+
+          <h4>Evidence</h4>
+          <div class="btn-row">
+            <a class="btn btn-small" data-link="thmRepo"><svg class="icon"><use href="#i-github"/></svg>GitHub repository</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. CERTIFICATIONS -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <p class="eyebrow">Certificates</p>
+        <h2>Courses completed</h2>
+        <div class="cert-grid">
+          <article class="cert reveal">
+            <h3>Google Cybersecurity Professional Certificate</h3>
+            <p>Security fundamentals, SIEM and IDS tools, Linux, SQL and incident response basics.</p>
+            <a class="btn btn-small" data-link="certGoogle"><svg class="icon"><use href="#i-link"/></svg>Certificate link</a>
+          </article>
+          <article class="cert reveal">
+            <h3>CS50's Introduction to Cybersecurity</h3>
+            <p>Core security concepts and good security practice.</p>
+            <a class="btn btn-small" data-link="certCS50"><svg class="icon"><use href="#i-link"/></svg>Certificate link</a>
+          </article>
+          <article class="cert reveal">
+            <h3>Cisco Network Basics</h3>
+            <p>Networking fundamentals that underpin traffic analysis.</p>
+            <a class="btn btn-small" data-link="certCisco"><svg class="icon"><use href="#i-link"/></svg>Certificate link</a>
+          </article>
+          <article class="cert reveal">
+            <h3>Network Traffic Analysis with Wireshark</h3>
+            <p>Capturing, filtering and reading packets to spot suspicious traffic.</p>
+            <a class="btn btn-small" data-link="certWireshark"><svg class="icon"><use href="#i-link"/></svg>Certificate link</a>
+          </article>
+          <article class="cert reveal">
+            <h3>Splunk Expert 101</h3>
+            <p>Splunk fundamentals for searching and investigating data.</p>
+            <a class="btn btn-small" data-link="certSplunk"><svg class="icon"><use href="#i-link"/></svg>Certificate link</a>
+          </article>
+          <article class="cert cert-progress reveal">
+            <h3>CompTIA Security+</h3>
+            <p>Broad security foundations across threats, architecture, operations and governance.</p>
+            <span class="status">In progress: exam preparation</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- 8. CONTACT -->
+    <section id="contact" class="section">
+      <div class="container narrow center">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's connect</h2>
+        <p class="section-intro">Open to feedback and junior SOC / blue team opportunities. I'd also love to connect with experienced security professionals, to learn from them and stay close to what's actually happening in the industry.</p>
+        <div class="btn-row center-row">
+          <a class="btn btn-primary" data-link="email"><svg class="icon"><use href="#i-mail"/></svg><span data-email-text>Email me</span></a>
+          <a class="btn btn-ghost" data-link="linkedin"><svg class="icon"><use href="#i-linkedin"/></svg>LinkedIn</a>
+          <a class="btn btn-ghost" data-link="github"><svg class="icon"><use href="#i-github"/></svg>GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> Shardul Rahul Deshpande. All rights reserved.</p>
+      <p class="muted small">Built with plain HTML, CSS and JavaScript. Labs were run in isolated personal environments.</p>
+    </div>
+  </footer>
+
+  <!-- Project detail popup -->
+  <dialog id="project-modal" class="modal" aria-labelledby="modal-title">
+    <div class="modal-inner">
+      <button type="button" class="modal-close" id="modal-close" aria-label="Close project details">×</button>
+      <div id="modal-body"></div>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
